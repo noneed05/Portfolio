@@ -1,0 +1,412 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+.yes {
+    max-width: 190rem;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header{
+    border-bottom: 1px solid black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: gray;
+    color: white;
+    max-width: 190rem;
+    position: fixed;
+    width: 100%;
+    border-bottom: solid 1px white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+.nav-item:hover {
+    text-decoration: 2px underline;
+    text-underline-offset: 5px;
+}
+
+.nav-link{
+    font-size: 2rem;
+    color: white;
+}
+
+.nav-logo {
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    color: black;
+    text-decoration: solid 1px white;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 6rem;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        border: solid 1px white;
+        padding: 4px;
+        border-radius: 5px;
+    }
+
+}
+
+
+/* Home buddy */
+
+#home {
+    background-color: #A39494;
+    height: 100%;
+    padding: 25rem 1rem;
+}
+
+/* Pang Computer */
+@media only screen and (min-width: 768px) {
+    .home-sec {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        align-items: center;
+       
+    }
+
+    .pic-ku {
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        max-height: 400px;
+    }
+}
+
+/* Pang Cellphone */
+@media only screen and (max-width: 767px) {
+    .home-sec {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, min-max(200, 1fr));
+        gap: 1rem;
+    }
+
+    .pic-ku {
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        max-height: 350px;
+        text-align: center;
+    }
+}
+
+.ole {
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px black;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.ole:hover {
+    box-shadow: 0 0 10px white;
+}
+
+
+/* Booty Work Section */
+
+#work {
+    background-color: #A39494;
+    height: 100%;
+    padding: 15rem 1rem;
+    border-top: solid 1px white;
+}
+
+.work-work {
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .work-work {
+        max-height: 300px;
+    }
+
+    .pic-ku {
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+        max-height: 400px;
+    }
+
+    .omeTV {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .manok {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .mehe {
+        max-width: 400px;
+    }
+    
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+    .work-work {
+        max-height: 250px;
+        margin-bottom: 10px;
+    }
+
+    .manok {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8rem;
+        text-align: center;
+    }
+}
+
+
+
+/* sir tee pikit section */
+
+#certificates {
+    height: 100%;
+    background-color: #A39494;
+    border-top: solid 1px white;
+    padding: 10rem 1rem;
+}
+
+/* desktop */
+@media only screen and (min-width: 768px) {
+
+    .cert-cont {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    .cert {
+        max-height: 400px;
+    }
+}
+
+/* mobs */
+@media only screen and (max-width: 767px) {
+    .cert-cont {
+        display: grid;
+        text-align: center;
+    }
+
+    .cert {
+        max-height: 250px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cert-cont {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cert {
+        max-height: 350px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablet ../.. */
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .cert-cont {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cert {
+        max-height: 350px;
+        margin-bottom: 10px;
+    }
+
+}
+   
+
+/* About ito saakin */
+
+
+#about {
+    height: 100%;
+    padding: 15rem 1rem;
+    background-color: #A39494;
+    border-top: solid 1px white;
+}
+
+@media only screen and (min-width: 768px) {
+    .kokak {
+        max-height: 400px;
+    }
+
+    .kokak-container  {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .sabi-sabi {
+        max-width: 500px;
+        font-size: 22px;
+        color: white;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .kokak {
+        max-height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .kokak-container  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sabi-sabi {
+        max-width: 500px;
+        font-size: 18px;
+        color: white;
+    }
+}
+
+/* Tabs */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1030px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .kokak-container  {
+        display: grid;
+        row-gap: 50px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sabi-sabi {
+        max-width: 500px;
+        font-size: 22px;
+        color: white;
+    }
+}
+
+
+
+/* Footer */
+
+#footer {
+    height: 100%;
+    padding: 4rem 1rem 0 1rem;
+    background-color: black;
+    border-top: solid 1px white;
+}
+
+.icons {
+    height: 30px;
+}
+
+.btn {
+    height: 30px;
+    width: 120px;
+    background-color: none;
+}
+
+.issue {
+    font-size: 2rem;
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .sopas {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .sopas {
+        display: grid;
+        row-gap: 10px;
+        text-align: center;
+    }
+}
